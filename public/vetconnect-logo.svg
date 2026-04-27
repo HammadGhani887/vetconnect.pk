@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 96" fill="none">
+  <defs>
+    <clipPath id="lnk-top">
+      <rect x="0" y="0" width="440" height="48"/>
+    </clipPath>
+    <clipPath id="lnk-bot">
+      <rect x="0" y="48" width="440" height="48"/>
+    </clipPath>
+  </defs>
+
+  <!-- Border -->
+  <rect x="3" y="3" width="434" height="90" rx="16" fill="white" stroke="#F5A724" stroke-width="5"/>
+
+  <!-- VET -->
+  <text x="22" y="66"
+    font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif"
+    font-size="48" font-weight="900"
+    fill="#F5A724">VET</text>
+
+  <!-- Circular arrows — center (145, 48) radius 22 -->
+  <!-- Top arc: 9-o'clock (123,48) → 3-o'clock (167,48) clockwise -->
+  <path d="M 123,48 A 22,22 0 0 1 167,48"
+    stroke="#1C1C1C" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Arrowhead at (167,48) pointing down -->
+  <path d="M 160,41 L 167,48 L 174,41"
+    stroke="#1C1C1C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom arc: 3-o'clock (167,48) → 9-o'clock (123,48) clockwise -->
+  <path d="M 167,48 A 22,22 0 0 1 123,48"
+    stroke="#1C1C1C" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Arrowhead at (123,48) pointing up -->
+  <path d="M 116,55 L 123,48 L 130,55"
+    stroke="#1C1C1C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Chain link interlocking:
+       Link 1 (upper-right) center (153,41), Link 2 (lower-left) center (137,55)
+       Link 1 back (bottom half) drawn first, then Link 2 full, then Link 1 front (top half) -->
+
+  <!-- Link 1 — back portion (below y=48) -->
+  <g clip-path="url(#lnk-bot)">
+    <rect x="140" y="34" width="26" height="14" rx="7"
+      fill="white" stroke="#1C1C1C" stroke-width="2.5"
+      transform="rotate(-35,153,41)"/>
+  </g>
+
+  <!-- Link 2 — full -->
+  <rect x="124" y="48" width="26" height="14" rx="7"
+    fill="white" stroke="#1C1C1C" stroke-width="2.5"
+    transform="rotate(-35,137,55)"/>
+
+  <!-- Link 1 — front portion (above y=48) -->
+  <g clip-path="url(#lnk-top)">
+    <rect x="140" y="34" width="26" height="14" rx="7"
+      fill="white" stroke="#1C1C1C" stroke-width="2.5"
+      transform="rotate(-35,153,41)"/>
+  </g>
+
+  <!-- CONNECT -->
+  <text x="190" y="66"
+    font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif"
+    font-size="48" font-weight="900"
+    fill="#003087">CONNECT</text>
+</svg>
